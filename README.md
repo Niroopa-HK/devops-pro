@@ -58,14 +58,33 @@ Once the Launch an instance window opens, provide the name of your EC2 Instance:
 For this demo, we will select an already existing key pair. You can create new key pair if you don’t have:
 <img width="1918" height="866" alt="Screenshot 2026-06-10 105024" src="https://github.com/user-attachments/assets/626e6830-5e5b-4ccd-a086-34d10e2a86a2" />
 
+Now under Network Settings, Choose the default VPC with Auto-assign public IP in enable mode. Create a new Security Group, provide a name for your security group, allow ssh traffic, and custom default TCP port of 8080 which is used by Jenkins.
+
 <img width="1912" height="863" alt="Screenshot 2026-06-10 105057" src="https://github.com/user-attachments/assets/faf78b07-85d5-4146-8127-dc83fe4098c4" />
 
 
+On the next screen you can see a success message after the successful creation of the EC2 instance, click on Connect to instance button:
+
 <img width="1917" height="867" alt="Screenshot 2026-06-10 105214" src="https://github.com/user-attachments/assets/d7b41baf-3acb-41e3-a16c-4df0788b09a5" />
 
+
+ let’s install java-openjdk21:
+ 
 <img width="1917" height="866" alt="Screenshot 2026-06-10 105347" src="https://github.com/user-attachments/assets/7deb9775-01ce-4c52-ac97-bcc5be38ffc1" />
 
+
 <img width="1918" height="870" alt="Screenshot 2026-06-10 105421" src="https://github.com/user-attachments/assets/f0d6a12e-e237-4cc0-9e98-23fa5c6074a0" />
+
+
+### To use this repository, run the following command:
+
+```
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+```
+
+```
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+```
 
 <img width="1918" height="872" alt="Screenshot 2026-06-10 105540" src="https://github.com/user-attachments/assets/33cb8220-3f04-4623-b858-d2347a81140d" />
 
