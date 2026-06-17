@@ -187,51 +187,40 @@ _Below is the screenshot of our newly created EC2 Instance on which we will inst
 
 <img width="1906" height="238" alt="Screenshot 2026-06-10 202109" src="https://github.com/user-attachments/assets/86f1608c-340a-42c6-b7d9-bac9f6c4a33a" />
 
-<img width="1917" height="862" alt="Screenshot 2026-06-11 205844" src="https://github.com/user-attachments/assets/24a7d8e1-c6f5-4273-b487-40969bd11d3b" />
+### Create Tomcat Docker Container:
+
+_We will first pull the official Tomcat docker image from the Docker Hub and then run the container out of the same image._
+
+Let’s now create a Container from the same Image with the command:
+
+```
+docker run -d --name tomcat-container -p 8081:8080 tomcat
+```
+
+<img width="1917" height="817" alt="Screenshot 2026-06-11 211258" src="https://github.com/user-attachments/assets/8068957f-05dc-41e3-a743-44421efb2391" />
 
 
-<img width="1912" height="786" alt="Screenshot 2026-06-11 205903" src="https://github.com/user-attachments/assets/9d5288cb-e9f1-4eca-84be-0796c80f2ccb" />
+_The above command runs a docker container in detached mode with the name tomcat-container and we are exposing port 8081 of our host machine with port 8080 of our container and it's using the latest image of tomcat._
+
+Let's verify the running container on our EC2 machine:
+
+Now let’s take the public IP of our Docker-host EC2 machine and with port 8081 access it from our browser:
+
+<img width="1913" height="822" alt="Screenshot 2026-06-11 213244" src="https://github.com/user-attachments/assets/78f6ac9d-3cb3-4c7d-bae1-cdd4cacc427d" />
+
+**Create a Customized Dockerfile for Tomcat:**
+
+_To create the Dockerfile we will use the official Image of Tomcat and with it will mention the step to copy the contents from the directory /webapps.dist to /webapps:_
+
+```
+FROM  tomcat:latest
+RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
+
+<img width="1918" height="820" alt="Screenshot 2026-06-11 214455" src="https://github.com/user-attachments/assets/3be54964-b86d-411c-8420-2215c0d34514" />
 
 
-<img width="1917" height="817" alt="Screenshot 2026-06-11 211258" src="https://github.com/user-attachments/assets/9a132893-7df5-4965-9968-bb1a38a7f928" />
-
-<img width="1902" height="742" alt="Screenshot 2026-06-11 212045" src="https://github.com/user-attachments/assets/474f7f8b-d863-411d-bb03-7d5bea22a711" />
-
-<img width="1913" height="822" alt="Screenshot 2026-06-11 213244" src="https://github.com/user-attachments/assets/ca03f0bf-2979-496a-80ca-d8d9653bc503" />
+<img width="1906" height="967" alt="image" src="https://github.com/user-attachments/assets/23b0c859-7820-4633-bb28-2b7f2f2e5b01" />
 
 
-<img width="1918" height="821" alt="Screenshot 2026-06-11 213421" src="https://github.com/user-attachments/assets/1488c897-02fc-4d2c-81c2-0536707ea306" />
 
 
-<img width="1918" height="820" alt="Screenshot 2026-06-11 214455" src="https://github.com/user-attachments/assets/99c289eb-bea2-4547-8c83-ee34d887d500" />
-
-<img width="1917" height="820" alt="Screenshot 2026-06-11 214755" src="https://github.com/user-attachments/assets/a4a0c784-4099-4f53-8f66-84ac28d8481a" />
-
-<img width="1913" height="282" alt="Screenshot 2026-06-11 214931" src="https://github.com/user-attachments/assets/57e28387-3e9b-482b-b9ba-de97aef54d09" />
-
-<img width="1917" height="266" alt="Screenshot 2026-06-11 215028" src="https://github.com/user-attachments/assets/b6d39f65-1d8e-4935-9e49-7a89509d4e65" />
-
-
-<img width="1912" height="826" alt="Screenshot 2026-06-12 091346" src="https://github.com/user-attachments/assets/1e01ece2-2efe-4afe-bd33-0aee12767023" />
-
-<img width="1638" height="787" alt="Screenshot 2026-06-12 103410" src="https://github.com/user-attachments/assets/757e399c-fa47-4c26-b7ba-a33465b28b54" />
-
-<img width="1868" height="712" alt="Screenshot 2026-06-12 103648" src="https://github.com/user-attachments/assets/83cc8e97-c172-4f45-b5c5-4e8a16d46ac4" />
-
-
-<img width="1902" height="842" alt="Screenshot 2026-06-12 103930" src="https://github.com/user-attachments/assets/ddb968b9-42a9-4dda-ba14-08e90b947243" />
-
-<img width="1655" height="811" alt="Screenshot 2026-06-12 105446" src="https://github.com/user-attachments/assets/c7a9ade8-672d-4df8-9a2c-34d9b90c1c65" />
-
-<img width="1660" height="666" alt="Screenshot 2026-06-12 111343" src="https://github.com/user-attachments/assets/3d0654e1-3737-401b-9e29-ba57a81d760d" />
-
-<img width="1748" height="526" alt="Screenshot 2026-06-12 111351" src="https://github.com/user-attachments/assets/ad160ac2-382a-49b2-9e52-0fbc093e585e" />
-
-
-<img width="1217" height="840" alt="Screenshot 2026-06-12 144511" src="https://github.com/user-attachments/assets/67fd6349-d263-49fa-a3c5-c1b94290021f" />
-
-<img width="1913" height="850" alt="Screenshot 2026-06-16 213303" src="https://github.com/user-attachments/assets/7ce0f2ae-eeb4-4b5d-a4c2-8abe202ea4b6" />
-
-<img width="1918" height="862" alt="Screenshot 2026-06-16 213501" src="https://github.com/user-attachments/assets/79637ac7-fe61-4259-8019-896ba36f8325" />
-
-<img width="1900" height="876" alt="Screenshot 2026-06-16 230339" src="https://github.com/user-attachments/assets/bd7bee2b-4887-4239-8d5d-563242e1ceb0" />
