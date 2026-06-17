@@ -206,7 +206,8 @@ Let's verify the running container on our EC2 machine:
 
 Now let’s take the public IP of our Docker-host EC2 machine and with port 8081 access it from our browser:
 
-<img width="1913" height="822" alt="Screenshot 2026-06-11 213244" src="https://github.com/user-attachments/assets/78f6ac9d-3cb3-4c7d-bae1-cdd4cacc427d" />
+<img width="1906" height="968" alt="Screenshot 2026-06-17 215426" src="https://github.com/user-attachments/assets/7d66459e-233d-4160-9ed1-edae7b61ed93" />
+
 
 **Create a Customized Dockerfile for Tomcat:**
 
@@ -216,11 +217,52 @@ _To create the Dockerfile we will use the official Image of Tomcat and with it w
 FROM  tomcat:latest
 RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
 
-<img width="1918" height="820" alt="Screenshot 2026-06-11 214455" src="https://github.com/user-attachments/assets/3be54964-b86d-411c-8420-2215c0d34514" />
-
-
-<img width="1906" height="967" alt="image" src="https://github.com/user-attachments/assets/23b0c859-7820-4633-bb28-2b7f2f2e5b01" />
+<img width="1918" height="820" alt="Screenshot 2026-06-11 214455" src="https://github.com/user-attachments/assets/5ac047c1-5a6c-4593-9497-3bd68a26856d" />
 
 
 
+### Step 5: Integrate Docker with Jenkins
 
+
+* Create a dockeradmin user
+* Install the “Publish Over SSH” plugin
+* Add Dockerhost to Jenkins “configure systems”
+
+_Let's first create a dockeradmin user and create a password for it as well._
+
+<img width="1902" height="842" alt="Screenshot 2026-06-12 103930" src="https://github.com/user-attachments/assets/5acf86d2-4246-4bf1-b056-50c17804144f" />
+
+<img width="1660" height="666" alt="Screenshot 2026-06-12 111343" src="https://github.com/user-attachments/assets/0bc94978-86ff-4061-aafc-ce9da1c4aee3" />
+
+<img width="1748" height="526" alt="Screenshot 2026-06-12 111351" src="https://github.com/user-attachments/assets/1902e7df-e28b-4c62-8af3-09670f87eb91" />
+
+<img width="1217" height="840" alt="Screenshot 2026-06-12 144511" src="https://github.com/user-attachments/assets/042b8b5b-1aae-4b29-b10b-4512b4d86b7f" />
+
+
+## Step 6: Update Dockerfile to copy Artifacts to launch New Container
+
+_In this step, we will create a Dockerfile to include the webapp.war file to launch a new container using our Java web Application. For that, we need to copy our artifacts to the location where we have our Dockerfile._
+
+We will create a separate directory named docker under the root user of our dockerhost inside /opt.
+
+If the build is successful we can see the webapp.war file in the /opt/docker directory of our dockerhost:
+
+_Let’s now build a new image using this updated Dockerfile with the command:_
+
+```
+docker build -t tomcat:v1 .
+```
+
+<img width="1918" height="862" alt="Screenshot 2026-06-16 213501" src="https://github.com/user-attachments/assets/f6426e59-59dd-4a3f-86df-448bf15b4d35" />
+
+
+**Output:**
+Now let’s access this application from our browser using URL http://[ip address]:8086/webapp/
+
+<img width="1900" height="876" alt="Screenshot 2026-06-16 230339" src="https://github.com/user-attachments/assets/0e8396ef-155f-46b1-8815-1c76add452d2" />
+
+
+# Hit the Star! ⭐
+***If you are planning to use this repo for learning, please hit the star. Thanks!***
+
+#### Author by [Niroopa HK](https://github.com/Niroopa-HK) 
