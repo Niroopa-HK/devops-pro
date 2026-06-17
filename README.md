@@ -49,7 +49,14 @@ Step 1: Setup Jenkins Server on AWS EC2 Instance
 - Install Jenkins
 - Start Jenkins
 - Access Web UI on Port 8080
+
+Log in to the Amazon management console, open EC2 Dashboard, click on the Launch Instance drop-down list, and click on Launch Instance as shown below:
+Once the Launch an instance window opens, provide the name of your EC2 Instance:
+
 <img width="1917" height="858" alt="Screenshot 2026-06-10 105004" src="https://github.com/user-attachments/assets/70f6aec2-a47c-4415-abc5-65b6b05b2086" />
+
+
+
 
 
 
