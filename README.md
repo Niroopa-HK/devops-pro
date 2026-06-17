@@ -151,6 +151,7 @@ _To install Maven on our Jenkins Server we will switch to the /opt directory and
 
 <img width="1918" height="808" alt="Screenshot 2026-06-10 120928" src="https://github.com/user-attachments/assets/151ff6be-e0bd-4f01-a404-1ba0d052dba7" />
 
+
 <img width="1918" height="807" alt="Screenshot 2026-06-10 121052" src="https://github.com/user-attachments/assets/f679b9bc-03c8-4b1e-a2af-4c643dd4bf81" />
 
 
@@ -159,11 +160,26 @@ _To install Maven on our Jenkins Server we will switch to the /opt directory and
 
 <img width="1912" height="812" alt="Screenshot 2026-06-10 121421" src="https://github.com/user-attachments/assets/19edf4d8-808f-4616-bd99-f6c89a72948b" />
 
+
 <img width="1916" height="817" alt="Screenshot 2026-06-10 121637" src="https://github.com/user-attachments/assets/25378816-09b1-4ae2-b98d-60a94c150421" />
+
 
 <img width="1918" height="467" alt="Screenshot 2026-06-10 121724" src="https://github.com/user-attachments/assets/f2c4efe3-8931-4a61-b83d-21658e3f87bf" />
 
+_Now we need to update the paths where Java and Maven have been installed in the Jenkins UI. We will first install the Maven Integration Plugin as shown below:_
+
 <img width="1912" height="845" alt="Screenshot 2026-06-10 122147" src="https://github.com/user-attachments/assets/6bf3eba9-00b2-47a9-9a64-9827271907ad" />
+
+## Step 4: Setup a Docker Host
+
+* Setup a Linux EC2 Instance
+* Install Docker
+* Start Docker Services
+* Run Basic Docker Commands
+
+_Let's first launch an EC2 Instance. We will skip the steps here as we have already shown earlier how to create an EC2 Instance._
+
+_Below is the screenshot of our newly created EC2 Instance on which we will install Docker:_
 
 <img width="1917" height="862" alt="Screenshot 2026-06-10 124543" src="https://github.com/user-attachments/assets/af4de8d5-cc8a-4a46-aca6-a4353c8adeb9" />
 
