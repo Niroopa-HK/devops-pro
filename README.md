@@ -1,5 +1,4 @@
-                                ## Deploy your code on a Docker Container using Jenkins on AWS
-
+                                # Deploy your code on a Docker Container using Jenkins on AWS
 <img width="1200" height="843" alt="cicd-pipeline-diagram-clean" src="https://github.com/user-attachments/assets/3c835414-74e0-4aa8-af12-ee61c2124151" />
 
 In this project, I personally implemented a complete **CI/CD pipeline** to deploy a **Java Web Application** on a **Docker container running on an AWS EC2 instance** using **Jenkins automation**.
@@ -216,7 +215,7 @@ _To create the Dockerfile we will use the official Image of Tomcat and with it w
 ```
 FROM  tomcat:latest
 RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
-
+```
 <img width="1918" height="820" alt="Screenshot 2026-06-11 214455" src="https://github.com/user-attachments/assets/5ac047c1-5a6c-4593-9497-3bd68a26856d" />
 
 
