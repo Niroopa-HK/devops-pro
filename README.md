@@ -129,17 +129,14 @@ _Now we are ready to use our Jenkins Server._
 
 _Let’s first install Git on our EC2 instance with the below command:_
 
-
-<img width="1911" height="967" alt="Screenshot 2026-06-10 110645" src="https://github.com/user-attachments/assets/f692d1e8-d83b-46ae-a8a5-
-  9124f02394b3" />
-
+  <img width="1918" height="461" alt="Screenshot 2026-06-10 111929" src="https://github.com/user-attachments/assets/cfd08c21-af23-4587-8294-a8835f14b841" />
 
 _To install the GitHub plugin lets go to our Jenkins Dashboard and click on manage Jenkins as shown:_
 
 _Now in order to install any plugin we need to select Available Plugins, search for Github Integration, select the plugin, and finally click on `Install without restart` as shown below:_
 
-  <img width="1918" height="461" alt="Screenshot 2026-06-10 111929" src="https://github.com/user-attachments/assets/cfd08c21-af23-4587-8294-a8835f14b841" />
 
+<img width="1918" height="437" alt="Screenshot 2026-06-10 112645" src="https://github.com/user-attachments/assets/4b19471b-0d99-4938-98ed-c78441c234b8" />
 
 ## Step 3: Integrate Maven with Jenkins
 
@@ -151,7 +148,6 @@ JAVA_HOME,M2,M2_HOME
 
 _To install Maven on our Jenkins Server we will switch to the /opt directory and download the Maven package:_
 
-<img width="1918" height="437" alt="Screenshot 2026-06-10 112645" src="https://github.com/user-attachments/assets/4b19471b-0d99-4938-98ed-c78441c234b8" />
 
 <img width="1918" height="808" alt="Screenshot 2026-06-10 120928" src="https://github.com/user-attachments/assets/151ff6be-e0bd-4f01-a404-1ba0d052dba7" />
 
