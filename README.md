@@ -105,20 +105,51 @@ _Now let’s try to access the Jenkins server through our browser. For that take
 
 <img width="1912" height="188" alt="Screenshot 2026-06-10 110117" src="https://github.com/user-attachments/assets/a500e84b-0f5c-4e72-99fc-c58a3f1f6850" />
 
+
 <img width="1915" height="971" alt="Screenshot 2026-06-10 110149" src="https://github.com/user-attachments/assets/15757f4f-aada-4cc7-8ed4-aebc0ef5651d" />
+
 
 <img width="1898" height="963" alt="Screenshot 2026-06-10 110211" src="https://github.com/user-attachments/assets/e2a4b9c7-74cf-479c-8258-9d29b00ab7d0" />
 
 
 <img width="1915" height="967" alt="Screenshot 2026-06-10 110232" src="https://github.com/user-attachments/assets/ba0740b6-77f1-44df-8f0f-9835720922eb" />
 
+_Now we can create our first Admin user, provide all the required data and proceed to save and continue._
+
 <img width="1912" height="945" alt="Screenshot 2026-06-10 110521" src="https://github.com/user-attachments/assets/928dd1e8-1435-4b34-80a7-844494c9b9c9" />
+
+_Now we are ready to use our Jenkins Server._
+
+
+## Step 2: Integrate GitHub with Jenkins
+
+* Install Git on Jenkins Instance
+* Install Github Plugin on Jenkins GUI
+* Configure Git on Jenkins GUI
+
+_Let’s first install Git on our EC2 instance with the below command:_
 
 
 <img width="1911" height="967" alt="Screenshot 2026-06-10 110645" src="https://github.com/user-attachments/assets/f692d1e8-d83b-46ae-a8a5-
   9124f02394b3" />
 
+
+_To install the GitHub plugin lets go to our Jenkins Dashboard and click on manage Jenkins as shown:_
+
+_Now in order to install any plugin we need to select Available Plugins, search for Github Integration, select the plugin, and finally click on `Install without restart` as shown below:_
+
   <img width="1918" height="461" alt="Screenshot 2026-06-10 111929" src="https://github.com/user-attachments/assets/cfd08c21-af23-4587-8294-a8835f14b841" />
+
+
+## Step 3: Integrate Maven with Jenkins
+
+* Setup Maven on Jenkins Server
+* Setup Environment Variables
+JAVA_HOME,M2,M2_HOME
+* Install Maven Plugin
+* Configure Maven and Java
+
+_To install Maven on our Jenkins Server we will switch to the /opt directory and download the Maven package:_
 
 <img width="1918" height="437" alt="Screenshot 2026-06-10 112645" src="https://github.com/user-attachments/assets/4b19471b-0d99-4938-98ed-c78441c234b8" />
 
