@@ -79,18 +79,29 @@ On the next screen you can see a success message after the successful creation o
 ### To use this repository, run the following command:
 
 ```
-sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
-```
-
-```
-sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key
+echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt update
+sudo apt install jenkins
 ```
 
 <img width="1918" height="872" alt="Screenshot 2026-06-10 105540" src="https://github.com/user-attachments/assets/33cb8220-3f04-4623-b858-d2347a81140d" />
 
+_Now let’s install Jenkins with the below command as shown in the output:_
+
 <img width="1918" height="868" alt="Screenshot 2026-06-10 105706" src="https://github.com/user-attachments/assets/12e9950a-19fe-4015-9a1c-014d42bfbd4f" />
 
+
+_After successful installation Let’s enable and start Jenkins service in our EC2 Instance:_
+
+
 <img width="1912" height="867" alt="Screenshot 2026-06-10 105816" src="https://github.com/user-attachments/assets/f6c7ab42-d6c1-46db-8985-20ab0a5a20fb" />
+
+_Now let’s try to access the Jenkins server through our browser. For that take the public IP of your EC2 instance and paste it into your favorite browser and should see something like this:_
+
 
 <img width="1912" height="188" alt="Screenshot 2026-06-10 110117" src="https://github.com/user-attachments/assets/a500e84b-0f5c-4e72-99fc-c58a3f1f6850" />
 
